@@ -71,6 +71,7 @@ if plot_lists == 'Pie Plot':
     plt.title('Distributions of record for different ',i,' groups')
     plt.pie(pie_data, labels=pie_data.index,autopct='%1.2f%%',startangle = 30, explode=np.linspace(.06,.16,6) 
     st.pyplot()
+
 # Display box plot using matplotlib module and 'st.pyplot()'
 if plot_lists=='Box Plot':
   st.title('Box Plot')
@@ -78,6 +79,7 @@ if plot_lists=='Box Plot':
     plt.figure(figsize=(12,2))
     plt.title('Distribution of hours-per-week for different ',i,' groups.')
     sns.boxplot(census_df['hours-per-week'], hue=i)
+    st.pyplot()
 
 # Display count plot using seaborn module and 'st.pyplot()' 
 if plot_lists=='Count Plot':
